@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wyścig na Szczyt — LoL Challenge</title>
+<meta name="description" content="4 kumpli, 4 świeże konta, 100 gier rankingowych. Kto wejdzie najwyżej?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="hero-eyebrow" id="hero-podtytul"></p>
+  <h1 class="hero-title" id="hero-nazwa"></h1>
+  <p class="hero-opis" id="hero-opis"></p>
+  <div class="hero-progress">
+    <div class="hero-progress-label">
+      <span>Postęp challenge'u</span>
+      <span class="mono" id="hero-progress-txt"></span>
+    </div>
+    <div class="bar"><div class="bar-fill" id="hero-progress-bar"></div></div>
+  </div>
+  <div class="hero-leader" id="hero-leader"></div>
+</header>
+
+<main>
+
+  <!-- ===== DRABINKA (wyścig) ===== -->
+  <section class="section" id="drabinka">
+    <h2 class="section-title">Drabinka</h2>
+    <p class="section-sub">Pozycja każdego z nas na wspinaczce Iron → Challenger. Wysokość żetonu = aktualna ranga + LP.</p>
+    <div class="ladder-wrap">
+      <div class="ladder" id="ladder"></div>
+    </div>
+  </section>
+
+  <!-- ===== GRACZE ===== -->
+  <section class="section" id="gracze">
+    <h2 class="section-title">Zawodnicy</h2>
+    <p class="section-sub">Najedź (lub tapnij) na kartę, żeby zobaczyć pełne statystyki.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <!-- ===== TABELA ===== -->
+  <section class="section" id="tabela">
+    <h2 class="section-title">Tabela wyników</h2>
+    <div class="table-wrap">
+      <table class="ranking-table">
+        <thead>
+          <tr><th>#</th><th>Gracz</th><th>Ranga</th><th>LP</th><th>W–L</th><th>Winrate</th><th>Gry</th></tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== WYRÓŻNIENIA ===== -->
+  <section class="section" id="wyroznienia">
+    <h2 class="section-title">Wyróżnienia</h2>
+    <div class="badges" id="badges"></div>
+  </section>
+
+  <!-- ===== ZASADY ===== -->
+  <section class="section" id="zasady">
+    <h2 class="section-title">Zasady</h2>
+    <ol class="rules" id="rules"></ol>
+    <div class="stake" id="stake"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span id="footer-info"></span>
+  <span class="footer-dim">Strona nieoficjalna — League of Legends jest znakiem towarowym Riot Games.</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
